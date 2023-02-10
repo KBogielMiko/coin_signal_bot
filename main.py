@@ -65,7 +65,15 @@ def current_stats():
             signal_list.append(d)
 
     if len(signal_list) > 0:                      # in case of non-empty list, Twitter activity and Telegram operations
+        def telegram_bot():                       # Telegram bot initialization
+            bot_token = 'bot_token'
+            bot_chat_id = 'bot_chat_id'
+            bot_msg = 'bot_msg'
+            send_text = 'https://api.telegram.org/bot' + bot_token + '/sendMessage?chat_id=' + bot_chat_id + \
+                        '&parse_mode=MarkdownV2&text=' + bot_msg
+            response = requests.get(send_text)
 
+            return response.json()
 
 ######## scheduler - last part
 
