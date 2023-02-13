@@ -80,7 +80,7 @@ def current_stats():
     for i in range(len(df['hour_change'])):        # in case of price increase, row appends to signal_list
         if df['hour_change'][i] > 1.1:
             signal_list.append(df.index[i])
-################ MIEJSCE NA TESTY signal_list
+
     if len(signal_list) > 0:                # in case of non-empty list, Twitter activity and Telegram operations
         for i in signal_list:
 
@@ -181,7 +181,7 @@ def weekly_stats():
     for i in range(len(df['weekly_change'])):        # in case of price increase, row appends to signal_list
         if df['weekly_change'][i] > 2:
             signal_list.append(df.index[i])
-################ MIEJSCE NA TESTY signal_list
+
 
     if len(signal_list) > 0:                # in case of non-empty list, Twitter activity and Telegram operations
         for i in signal_list:
@@ -219,7 +219,7 @@ def daily_stats():
     for i in range(len(df['daily_change'])):        # in case of price increase, row appends to signal_list
         if df['daily_change'][i] > 1.5:
             signal_list.append(df.index[i])
-################ MIEJSCE NA TESTY signal_list
+
 
     if len(signal_list) > 0:                # in case of non-empty list, Twitter activity and Telegram operations
         for i in signal_list:
