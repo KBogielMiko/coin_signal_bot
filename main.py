@@ -147,7 +147,7 @@ def current_stats():
 
             image = open(file_name, "rb")
             data = {"photo": image}
-            url = "https://api.telegram.org/bot5719676352:AAH8Q8OTuG8gJ6ZGi62MGrKLtnt0MjnQXkg/sendPhoto"
+            url = "https://api.telegram.org/bot" + telegram_bot_token +"/sendPhoto"
             files = {'photo': (file_name, open(file_name, 'rb'), 'image/png')}
             data = {'chat_id': '-1001742364969'}
 
